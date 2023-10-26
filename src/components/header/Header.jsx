@@ -3,12 +3,11 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
+import Img from "../../components/lazyLoadImage/Img";
 import logo from "../../assets/CinemaLogo.png";
-import Img from "../lazyLoadImage/Img";
 
 const Header = () => {
     const [show, setShow] = useState("top");
@@ -75,7 +74,7 @@ const Header = () => {
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
             <ContentWrapper>
                 <div className="logo" onClick={() => navigate("/")}>
-                    <Img src={logo}/>
+                    <Img src={logo} alt=""/>
                 </div>
                 <ul className="menuItems">
                     <li
