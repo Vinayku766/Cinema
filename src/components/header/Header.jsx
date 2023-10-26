@@ -8,6 +8,7 @@ import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import logo from "../../assets/cinema-logo.png";
+import Img from "../lazyLoadImage/Img";
 
 const Header = () => {
     const [show, setShow] = useState("top");
@@ -74,7 +75,7 @@ const Header = () => {
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
             <ContentWrapper>
                 <div className="logo" onClick={() => navigate("/")}>
-                    <img src={logo} alt="" />
+                    <Img src={logo}/>
                 </div>
                 <ul className="menuItems">
                     <li
